@@ -126,7 +126,7 @@ public class SomeErrors {
         for (String s : products) {
             if (s != null && s.equals(product)) {
                 System.out.println("product " + products[i]);
-                System.out.println("price " + prices[1]);
+                System.out.println("price " + prices[i]);
             }
             i++;
 
