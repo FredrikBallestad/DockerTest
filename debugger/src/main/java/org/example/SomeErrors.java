@@ -65,26 +65,25 @@ public class SomeErrors {
 
         Scanner input = new Scanner(System.in);
 
-        int emptyIndex = -1;
+        int index = 0;
         for (int i = 0; i < products.length; i++) {
             if (products[i] == null) {
-                emptyIndex = i;
+                index = i;
                 break;
             }
         }
-        if (emptyIndex == -1) {
+        if (index == 2) {
             System.out.println("Your list is full! Please remove a product to be able to add another product!");
             return;
         }
 
         System.out.println("Enter a product");
         String product = input.next();
-        products[emptyIndex++] = product;
+        products[index] = product;
 
         System.out.println("Enter price");
         int price = input.nextInt();
-        prices[emptyIndex  ] = price;
-
+        prices[index] = price;
     }
 
     public static void seeProducts(String[] products, int[] prices) {
@@ -111,8 +110,8 @@ public class SomeErrors {
             if (s != null && s.equals(product)) {
                 products[i] = null;
                 prices[i] = 0;
-                i++;
             }
+            i++;
         }
 
     }
